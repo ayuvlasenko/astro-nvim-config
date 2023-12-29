@@ -8,16 +8,16 @@ return {
   n = {
     -- second key is the lefthand side of the map
 
-    -- navigate buffer tabs with `H` and `L`
-    -- L = {
-    --   function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
-    --   desc = "Next buffer",
-    -- },
-    -- H = {
-    --   function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
-    --   desc = "Previous buffer",
-    -- },
-
+    L = {
+      function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
+      desc = "Next buffer",
+    },
+    H = {
+      function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
+      desc = "Previous buffer",
+    },
+    ["<A-j>"] = { ":m .+1<CR>==", desc = "Move line down" },
+    ["<A-k>"] = { ":m .-2<CR>==", desc = "Move line up" },
     -- mappings seen under group name "Buffer"
     ["<leader>bD"] = {
       function()
@@ -32,6 +32,19 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<C-d>"] = { "<C-d>zz", desc = "Scroll and center screen" },
+    ["<C-u>"] = { "<C-u>zz", desc = "Scroll and center screen" },
+  },
+  v = {
+    ["<A-j>"] = { ">+1<CR>gv=gv", desc = "Move line down" },
+    ["<A-k>"] = { "<-2<CR>gv=gv", desc = "Move line up" },
+    ["p"] = { '"_dP', desc = "Paste without copying" },
+  },
+  x = {
+    ["J"] = { ":m '>+1<CR>gv=gv", desc = "Move line down" },
+    ["K"] = { ":m '<-2<CR>gv=gv", desc = "Move line down" },
+    ["<A-j>"] = { ">+1<CR>gv=gv", desc = "Move line down" },
+    ["<A-k>"] = { "<-2<CR>gv=gv", desc = "Move line up" },
   },
   t = {
     -- setting a mapping to false will disable it

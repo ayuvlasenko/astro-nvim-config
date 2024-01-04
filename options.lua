@@ -7,6 +7,7 @@ return {
     spell = true, -- sets vim.opt.spell
     spelllang = { "en_us", "ru" },
     spelloptions = "camel",
+    spellcapcheck = "", -- don't check for capital letters at start of sentence
     signcolumn = "yes", -- sets vim.opt.signcolumn to yes
     wrap = false, -- sets vim.opt.wrap
     so = 5,

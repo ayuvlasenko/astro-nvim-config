@@ -50,4 +50,28 @@ return {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
   },
+  i = {
+    ["<C-u>"] = {
+      'copilot#Accept("<CR>")',
+      noremap = true,
+      silent = true,
+      expr = true,
+      replace_keycodes = false,
+    },
+    ["<C-a>"] = { "<Plug>(copilot-accept-word)" },
+    ["<C-l>"] = {
+      "copilot#Next()",
+      noremap = true,
+      silent = true,
+      expr = true,
+      replace_keycodes = false,
+    },
+    ["<C-h>"] = {
+      "copilot#Previous()",
+      noremap = true,
+      silent = true,
+      expr = true,
+      replace_keycodes = false,
+    },
+  },
 }

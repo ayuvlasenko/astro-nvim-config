@@ -54,6 +54,25 @@ return {
     servers = {
       -- "pyright"
     },
+    config = {
+      tsserver = function()
+        return {
+          commands = {
+            OrganizeImports = {
+              function()
+                local params = {
+                  command = "_typescript.organizeImports",
+                  arguments = { vim.api.nvim_buf_get_name(0) },
+                  title = "",
+                }
+                vim.lsp.buf.execute_command(params)
+              end,
+              description = "Organize Imports",
+            },
+          },
+        }
+      end,
+    },
   },
 
   -- Configure require("lazy").setup() options

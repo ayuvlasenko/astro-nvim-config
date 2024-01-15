@@ -95,16 +95,22 @@ return {
       command = "setlocal tabstop=4 shiftwidth=4",
     })
     -- Set up custom filetypes
-    -- vim.filetype.add {
-    --   extension = {
-    --     foo = "fooscript",
-    --   },
-    --   filename = {
-    --     ["Foofile"] = "fooscript",
-    --   },
-    --   pattern = {
-    --     ["~/%.config/foo/.*"] = "fooscript",
-    --   },
-    -- }
+    vim.filetype.add {
+      -- extension = {
+      --   foo = "fooscript",
+      -- },
+      -- filename = {
+      --   ["Foofile"] = "fooscript",
+      -- },
+      -- pattern = {
+      --   ["~/%.config/foo/.*"] = "fooscript",
+      -- },
+      filename = {
+        [".env"] = "sh",
+      },
+      pattern = {
+        ["%.env%.[%w_.-]+"] = "sh",
+      },
+    }
   end,
 }

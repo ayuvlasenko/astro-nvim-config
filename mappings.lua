@@ -34,6 +34,8 @@ return {
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     ["<C-d>"] = { "<C-d>zz", desc = "Scroll and center screen" },
     ["<C-u>"] = { "<C-u>zz", desc = "Scroll and center screen" },
+    ["<C-j>"] = { "i<CR><Esc>l", desc = "Break a line" },
+    ["<F8>"] = { function() vim.diagnostic.goto_next() end, desc = "Go to next diagnostic" },
   },
   v = {
     ["<A-j>"] = { ">+1<CR>gv=gv", desc = "Move line down" },

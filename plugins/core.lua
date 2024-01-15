@@ -28,6 +28,16 @@ return {
           visible = true,
         },
       })
+
+      opts.window = require("astronvim.utils").extend_tbl(opts.window, {
+        width = 35,
+      })
+
+      opts.default_component_configs = require("astronvim.utils").extend_tbl(opts.default_component_configs, {
+        indent = require("astronvim.utils").extend_tbl(opts.default_component_configs.indent, {
+          indent_size = 1,
+        }),
+      })
     end,
   },
   -- You can disable default plugins as follows:

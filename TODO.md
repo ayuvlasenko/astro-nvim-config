@@ -1,3 +1,4 @@
+- make possible to find hidden files (eg. .env.local) through <leader>ff
 - treat .env.* as .env in neo-tree
 - make eslint ignore node_modules (.eslintignore ?)
 - rename files

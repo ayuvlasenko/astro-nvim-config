@@ -1,4 +1,5 @@
 - make possible to find hidden files (eg. .env.local) through \<leader\>ff
+- use a repository name as a terminal tab name
 - treat .env.* as .env in neo-tree
 - make eslint ignore node_modules (.eslintignore ?)
 - rename files

@@ -1,13 +1,5 @@
--- Mapping data with "desc" stored directly by vim.keymap.set().
---
--- Please use this mappings table to set keyboard mapping since this is the
--- lower level configuration and more robust one. (which-key will
--- automatically pick-up stored data by this setting.)
 return {
-  -- first key is the mode
   n = {
-    -- second key is the lefthand side of the map
-
     L = {
       function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
       desc = "Next buffer",
@@ -18,7 +10,6 @@ return {
     },
     ["<A-j>"] = { ":m .+1<CR>==", desc = "Move line down" },
     ["<A-k>"] = { ":m .-2<CR>==", desc = "Move line up" },
-    -- mappings seen under group name "Buffer"
     ["<leader>bD"] = {
       function()
         require("astronvim.utils.status").heirline.buffer_picker(
@@ -27,11 +18,7 @@ return {
       end,
       desc = "Pick to close",
     },
-    -- tables with the `name` key will be registered with which-key if it's installed
-    -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
-    -- quick save
-    -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     ["<C-d>"] = { "<C-d>zz", desc = "Scroll and center screen" },
     ["<C-u>"] = { "<C-u>zz", desc = "Scroll and center screen" },
     ["<C-j>"] = { "i<CR><Esc>l", desc = "Break a line" },
@@ -48,10 +35,7 @@ return {
     ["<A-j>"] = { ">+1<CR>gv=gv", desc = "Move line down" },
     ["<A-k>"] = { "<-2<CR>gv=gv", desc = "Move line up" },
   },
-  t = {
-    -- setting a mapping to false will disable it
-    -- ["<esc>"] = false,
-  },
+  t = {},
   i = {
     ["<C-u>"] = {
       'copilot#Accept("<CR>")',

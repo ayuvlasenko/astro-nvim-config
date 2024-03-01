@@ -1,5 +1,4 @@
 return {
-  -- Configure AstroNvim updates
   updater = {
     remote = "origin", -- remote to use
     channel = "stable", -- "stable" or "nightly"
@@ -17,20 +16,15 @@ return {
     },
   },
 
-  -- Set colorscheme to use
-  -- colorscheme = "astrodark",
   colorscheme = "catppuccin",
 
-  -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
     virtual_text = false,
     underline = true,
   },
 
   lsp = {
-    -- customize lsp formatting options
     formatting = {
-      -- control auto formatting on save
       format_on_save = {
         enabled = true, -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
@@ -41,11 +35,9 @@ return {
         },
       },
       disabled = { -- disable formatting capabilities for the listed language servers
-        -- disable lua_ls formatting capability if you want to use StyLua to format your lua code
-        -- "lua_ls",
         "tsserver",
       },
-      timeout_ms = 1000, -- default format timeout
+      timeout_ms = 5000, -- default format timeout
       -- filter = function(client) -- fully override the default formatting function
       --   return true
       -- end
@@ -75,12 +67,10 @@ return {
     },
   },
 
-  -- Configure require("lazy").setup() options
   lazy = {
     defaults = { lazy = true },
     performance = {
       rtp = {
-        -- customize default disabled vim plugins
         disabled_plugins = { "tohtml", "gzip", "matchit", "zipPlugin", "tarPlugin" },
       },
     },

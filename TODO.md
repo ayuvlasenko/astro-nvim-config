@@ -1,4 +1,3 @@
-- make possible to find hidden files (eg. .env.local) through \<leader\>ff
 - add OrganizeImports mapping only to tssever
 - use a repository name as a terminal tab name
 - treat .env.* as .env in neo-tree

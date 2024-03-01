@@ -38,4 +38,12 @@ return {
       })
     end,
   },
+  {
+    "nvim-telescope/telescope.nvim",
+    opts = function(_, opts)
+      opts.defaults = require("astronvim.utils").extend_tbl(opts.defaults, {
+        file_ignore_patterns = { ".git" },
+      })
+    end,
+  },
 }

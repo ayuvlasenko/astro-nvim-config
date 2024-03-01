@@ -23,6 +23,7 @@ return {
     ["<C-u>"] = { "<C-u>zz", desc = "Scroll and center screen" },
     ["<C-j>"] = { "i<CR><Esc>l", desc = "Break a line" },
     ["<F8>"] = { function() vim.diagnostic.goto_next() end, desc = "Go to next diagnostic" },
+    ["<leader>ff"] = { function() require("telescope.builtin").find_files { hidden = true } end, desc = "Find files" },
   },
   v = {
     ["<A-j>"] = { ">+1<CR>gv=gv", desc = "Move line down" },

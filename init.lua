@@ -97,6 +97,7 @@ return {
       -- },
       filename = {
         [".env"] = "sh",
+        ["docker-compose.yaml"] = "yaml.docker-compose",
       },
       pattern = {
         ["%.env%.[%w_.-]+"] = "sh",

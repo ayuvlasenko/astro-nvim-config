@@ -8,6 +8,7 @@ return {
         "docker_compose_language_service",
         "dockerls",
         "terraformls",
+        "prismals",
       })
     end,
   },
@@ -19,6 +20,7 @@ return {
         "eslint_d",
         "stylua",
         "terraform_fmt",
+        "prismaFmt",
       })
     end,
   },

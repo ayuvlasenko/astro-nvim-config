@@ -7,6 +7,7 @@ return {
       null_ls.builtins.formatting.prettier.with { filetypes = { "typescript", "json" } },
       null_ls.builtins.diagnostics.eslint_d,
       null_ls.builtins.formatting.terraform_fmt,
+      null_ls.builtins.formatting.prismaFmt,
     }
 
     return config
